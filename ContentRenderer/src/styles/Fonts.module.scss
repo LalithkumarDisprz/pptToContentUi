@@ -1,0 +1,240 @@
+$font-family-regular: 'Custom-Regular';
+$font-family-bold: 'Custom-Bold';
+$font-family-moderate: 'Custom-Medium';
+$font-family-semi-bold: 'Custom-SemiBold';
+
+/* #region Font for Desktops */
+
+/* #region Font Styles - Regular */
+
+@mixin font-tiny {
+  font-family: $font-family-regular;
+  font-size: 10px;
+}
+
+@mixin font-normal {
+  font-family: $font-family-regular;
+  font-size: 14px;
+}
+
+@mixin font-small {
+  font-family: $font-family-regular;
+  font-size: 12px;
+}
+
+@mixin font-medium {
+  font-family: $font-family-regular;
+  font-size: 16px;
+}
+
+@mixin font-large {
+  font-family: $font-family-regular;
+  font-size: 18px;
+}
+
+@mixin font-huge {
+  font-family: $font-family-regular;
+  font-size: 24px;
+}
+
+@mixin font-mammoth {
+  font-family: $font-family-regular;
+  font-size: 30px;
+}
+
+/* #endregion Font Styles - Regular */
+
+/* #region Font Styles - Bold */
+
+@mixin font-bold-tiny {
+  font-family: $font-family-bold;
+  font-size: 10px;
+}
+
+@mixin font-bold-small {
+  font-family: $font-family-bold;
+  font-size: 12px;
+}
+
+@mixin font-bold-normal {
+  font-family: $font-family-bold;
+  font-size: 14px;
+}
+
+@mixin font-bold-medium {
+  font-family: $font-family-bold;
+  font-size: 16px;
+}
+
+@mixin font-bold-large {
+  font-family: $font-family-bold;
+  font-size: 18px;
+}
+
+@mixin font-bold-huge {
+  font-family: $font-family-bold;
+  font-size: 24px;
+}
+
+@mixin font-bold-mammoth {
+  font-family: $font-family-bold;
+  font-size: 30px;
+}
+
+/* #endregion Font Styles - Bold */
+
+/* #region Font Styles - Semibold */
+
+@mixin font-semi-bold-tiny {
+  font-family: $font-family-semi-bold;
+  font-size: 10px;
+}
+
+@mixin font-semi-bold-small {
+  font-family: $font-family-semi-bold;
+  font-size: 12px;
+}
+
+@mixin font-semi-bold-normal {
+  font-family: $font-family-semi-bold;
+  font-size: 14px;
+}
+
+@mixin font-semi-bold-medium {
+  font-family: $font-family-semi-bold;
+  font-size: 16px;
+}
+
+@mixin font-semi-bold-large {
+  font-family: $font-family-semi-bold;
+  font-size: 18px;
+}
+
+@mixin font-semi-bold-huge {
+  font-family: $font-family-semi-bold;
+  font-size: 24px;
+}
+
+@mixin font-semi-bold-mammoth {
+  font-family: $font-family-semi-bold;
+  font-size: 30px;
+}
+
+/* #endregion Font Styles - Semibold */
+
+/* #region Font Styles - Moderate */
+
+@mixin font-moderate-tiny {
+  font-family: $font-family-moderate;
+  font-size: 10px;
+}
+
+@mixin font-moderate-small {
+  font-family: $font-family-moderate;
+  font-size: 12px;
+}
+
+@mixin font-moderate-normal {
+  font-family: $font-family-moderate;
+  font-size: 14px;
+}
+
+@mixin font-moderate-medium {
+  font-family: $font-family-moderate;
+  font-size: 16px;
+}
+
+@mixin font-moderate-large {
+  font-family: $font-family-moderate;
+  font-size: 18px;
+}
+
+@mixin font-moderate-huge {
+  font-family: $font-family-moderate;
+  font-size: 24px;
+}
+
+@mixin font-moderate-mammoth {
+  font-family: $font-family-moderate;
+  font-size: 30px;
+}
+
+/* #endregion Font Styles - Moderate */
+
+/* #endregion Font for Desktops */
+
+/* #region Font for Mobiles */
+
+/* #region Font Styles - Regular */
+
+@mixin mobile-font-tiny {
+  font-family: $font-family-regular;
+  font-size: 9px;
+}
+
+@mixin mobile-font-small {
+  @include fontTiny;
+}
+
+@mixin mobile-font-normal {
+  @include font-small;
+}
+
+@mixin mobile-font-medium {
+  @include font-normal;
+}
+
+@mixin mobile-font-large {
+  @include font-normal;
+}
+
+@mixin mobile-font-huge {
+  @include font-large;
+}
+
+@mixin mobile-font-mammoth {
+  @include font-huge;
+}
+
+/* #endregion Font Styles - Regular */
+
+/* #region Font Styles - Bold */
+
+@mixin mobile-font-bold-tiny {
+  font-family: $font-family-bold;
+  font-size: 8px;
+}
+
+@mixin mobile-font-bold-small {
+  @include font-bold-tiny;
+}
+
+@mixin mobile-font-bold-normal {
+  @include font-bold-small;
+}
+
+@mixin mobile-font-bold-medium {
+  @include font-bold-normal;
+}
+
+@mixin mobile-font-bold-large {
+  @include font-bold-normal;
+}
+
+@mixin mobile-font-bold-huge {
+  @include font-bold-large;
+}
+
+/* #endregion Font Styles - Bold */
+
+/* #endregion Font for Mobiles */
+
+/* Others */
+
+@mixin font-regular-weight {
+  font-family: $font-family-regular;
+}
+
+@mixin font-bold-weight {
+  font-family: $font-family-bold;
+}

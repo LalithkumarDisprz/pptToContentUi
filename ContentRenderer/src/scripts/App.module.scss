@@ -1,0 +1,46 @@
+@use './Base.module.scss' as Base;
+
+.template {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  background-color: Base.$background;
+  width: 100%;
+
+  .templateText {
+    @include Base.font-bold-mammoth;
+
+    color: Base.$primary;
+  }
+
+  .gif {
+    width: 250px;
+    height: 250px;
+    background-color: #333333;
+  }
+
+  .header {
+    background-color: Base.$primary;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: Base.$primary;
+    position: absolute;
+    padding-inline-start: 32px;
+    top: 0;
+
+    .leftArrow {
+      margin-inline-end: 16px;
+
+      /* stylelint-disable-next-line selector-class-pattern */
+      :global(.app-icon) {
+        width: 30px;
+        height: 30px;
+        fill: white;
+      }
+    }
+  }
+}

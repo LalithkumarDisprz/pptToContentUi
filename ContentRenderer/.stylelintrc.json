@@ -1,0 +1,54 @@
+{
+    "extends": [
+        "stylelint-config-standard-scss",
+        "stylelint-config-prettier-scss"
+    ],
+    "plugins": [
+        "stylelint-declaration-strict-value",
+        "stylelint-use-logical"
+    ],
+    "rules": {
+        "color-hex-length": "long",
+        "no-invalid-position-at-import-rule": null,
+        "scss/double-slash-comment-whitespace-inside": "always",
+        "csstools/use-logical": [
+            "always",
+            {
+                "except": [
+                    "top",
+                    "bottom",
+                    "margin-top",
+                    "margin-bottom",
+                    "padding-top",
+                    "padding-bottom"
+                ]
+            }
+        ]
+    },
+    "overrides": [
+        {
+            "files": [
+                "**/*.module.scss"
+            ],
+            "rules": {
+                "color-hex-length": "long",
+                "no-invalid-position-at-import-rule": null,
+                "scss/double-slash-comment-whitespace-inside": "always",
+                "selector-class-pattern": [
+                    "^[a-z][a-zA-Z0-9]+$",
+                    {
+                        "message": "Expected class selector to be camelCase"
+                    }
+                ],
+                "selector-pseudo-class-no-unknown": [
+                    true,
+                    {
+                        "ignorePseudoClasses": [
+                            "global"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

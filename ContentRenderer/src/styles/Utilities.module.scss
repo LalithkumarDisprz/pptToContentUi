@@ -1,0 +1,57 @@
+@mixin input-ctrl {
+  border: none;
+  border-bottom: solid 1px lightgrey;
+  padding: 5px 0 0;
+  border-radius: 0;
+
+  // -webkit-appearance: none;
+  background-color: white;
+  height: 35px;
+  outline: none;
+
+  // -webkit-transition: border-color 0.4s ease-in-out;
+  // -moz-transition: border-color 0.4s ease-in-out;
+  // -ms-transition: border-color 0.4s ease-in-out;
+  // -o-transition: border-color 0.4s ease-in-out;
+  transition: border-color 0.4s ease-in-out;
+}
+
+@mixin make-line-clamp($lineCount) {
+  // display: -webkit-box;
+  -webkit-line-clamp: #{$lineCount};
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin input-placeholder {
+  // ::-webkit-input-placeholder {
+  //     /* Chrome/Opera/Safari */
+  //     @content;
+  // }
+  // ::-moz-placeholder {
+  //     /* Firefox 19+ */
+  //     @content;
+  // }
+}
+
+@mixin disable-element {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+// functions
+
+@mixin overflow-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+@mixin prefix-provider($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
