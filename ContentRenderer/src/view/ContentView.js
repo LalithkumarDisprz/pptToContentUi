@@ -55,6 +55,7 @@ const ContentView = () => {
             uniqueId={1685273317682}
             ctrCls=""
             label="Previous Page"
+            isDisabled={currentPage === 1}
             onClick={previousPage}
           />
           <DisprzButton
@@ -62,6 +63,7 @@ const ContentView = () => {
             ctrCls=""
             label="Next Page"
             onClick={nextPage}
+            isDisabled={currentPage === data.length - 1}
           />
         </div>
       </div>
