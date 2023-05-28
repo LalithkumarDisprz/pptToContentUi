@@ -1,27 +1,34 @@
+// ImageTextOverlay.js
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import styles from './ImageTextOverlaySide.module.scss';
 
-const ImageTextOverlaySide = ({ data }) => {
+const ImageTextOverlaySide = ({ data, currentPage }) => {
   const [objects, setObjects] = useState([]);
+  console.log(data, 'inside');
   useEffect(() => {
+    setObjects([]);
     const updatedGroup = [];
     data.textGroup.forEach((obj, index) => {
       const timeout = setTimeout(() => {
         updatedGroup[index] = {
           ...obj,
-          translate: true,
+          translate: currentPage === data.pageNumber,
         };
         setObjects([...updatedGroup]);
-      }, (index + 1) * 2000);
+      }, (index + 1) * 1000);
+
       return () => clearTimeout(timeout);
     });
-  }, [data]);
-  console.log(objects, 'ibs');
+  }, [data, currentPage]);
   return (
     <div className={styles.container}>
       <div className={styles.overlayContainer}>
-        <img src={data.imageElement.url} alt="image content" />
+        <img
+          style={{ width: '700px', height: '700px' }}
+          src={data.imageElement.url}
+          alt="image content"
+        />
         <div className={styles.textGroup}>
           {objects.map((obj, index) => (
             <div
@@ -61,6 +68,7 @@ const ImageTextOverlaySide = ({ data }) => {
 
 ImageTextOverlaySide.propTypes = {
   data: PropTypes.object,
+  currentPage: PropTypes.number,
 };
 
 export default ImageTextOverlaySide;

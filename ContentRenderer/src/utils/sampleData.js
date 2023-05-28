@@ -60,6 +60,10 @@ export const data = [
         subheading: 'This is subheading',
         text: 'In the fast-paced world of business, success is often the result of strategic planning, innovation, and adaptability. ',
       },
+      {
+        subheading: 'Welcome!',
+        text: 'In the fast-paced world of business, success is often the result of strategic planning, innovation, and adaptability.',
+      },
     ],
     imageElement: {
       url: 'https://i.pinimg.com/564x/40/4e/1c/404e1c3637b978df504db9a7f3c653d7.jpg',

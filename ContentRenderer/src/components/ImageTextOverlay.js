@@ -7,6 +7,7 @@ const ImageTextOverlay = ({ data, currentPage }) => {
   const [objects, setObjects] = useState([]);
   console.log(data, 'inside');
   useEffect(() => {
+    setObjects([]);
     const updatedGroup = [];
     data.textGroup.forEach((obj, index) => {
       const timeout = setTimeout(() => {
@@ -15,16 +16,19 @@ const ImageTextOverlay = ({ data, currentPage }) => {
           translate: currentPage === data.pageNumber,
         };
         setObjects([...updatedGroup]);
-      }, (index + 1) * 2000);
+      }, (index + 1) * 1000);
 
       return () => clearTimeout(timeout);
     });
   }, [data, currentPage]);
-  
   return (
     <div className={styles.container}>
       <div className={styles.overlayContainer}>
-        <img src={data.imageElement.url} alt="image content" />
+        <img
+          style={{ width: '700px', height: '700px' }}
+          src={data.imageElement.url}
+          alt="image content"
+        />
         <div className={styles.textGroup}>
           {objects.map((obj, index) => (
             <div

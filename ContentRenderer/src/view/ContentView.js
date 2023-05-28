@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ContentCategory } from '../enums/ContentCategory';
 import ImageTextOverlay from '../components/ImageTextOverlay';
 import { data } from '../utils/sampleData';
+import { AutomationIdPrefixProvider, DisprzButton } from '@disprz/components';
 import ImageTextOverlaySide from '../components/ImageTextOverlaySide';
 const ContentView = () => {
   // const [currentPage, setCurrentPage] = useState(data[1]);
@@ -19,11 +20,15 @@ const ContentView = () => {
   //     return prevPage;
   //   });
   // };
-  const [currentPage, setCurrentPage] = useState(1);
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const previousPage = () => {
+    setCurrentPage((prevPage) => prevPage - 1);
+  };
   const nextPage = () => {
     setCurrentPage((prevPage) => prevPage + 1);
   };
+
   const renderContent = () => {
     const pageData = data.find((page) => page.pageNumber === currentPage);
 
@@ -33,19 +38,34 @@ const ContentView = () => {
     switch (pageData.imageElement.aspectRatio) {
       case ContentCategory.ImageTextOverlay:
         return <ImageTextOverlay data={pageData} currentPage={currentPage} />;
-      // return <ImageTextOverlaySide data={currentPage} />;
+      // return (
+      //   <ImageTextOverlaySide data={pageData} currentPage={currentPage} />
+      // );
       default:
         break;
     }
   };
 
   return (
-    <div className={styles.pageContainer}>
-      {renderContent()}
-      <button className={styles.button} onClick={nextPage}>
-        Next Page
-      </button>
-    </div>
+    <AutomationIdPrefixProvider value="Content_View">
+      <div className={styles.pageContainer}>
+        {renderContent()}
+        <div className={styles.button}>
+          <DisprzButton
+            uniqueId={1685273317682}
+            ctrCls=""
+            label="Previous Page"
+            onClick={previousPage}
+          />
+          <DisprzButton
+            uniqueId={1685293317682}
+            ctrCls=""
+            label="Next Page"
+            onClick={nextPage}
+          />
+        </div>
+      </div>
+    </AutomationIdPrefixProvider>
   );
 };
 ContentView.propTypes = {};

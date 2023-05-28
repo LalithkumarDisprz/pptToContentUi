@@ -16,10 +16,10 @@
   }
   .button
   {
-    width:70px;
-    border:1px solid black;
-    border-radius: 4px;
-    padding:5px;
+    width: 700px;
+    display: flex;
+    justify-content: flex-end;
+    gap:20px
   }
   
   .subheadings {

@@ -4,6 +4,7 @@
     display: grid;
   grid-template-columns: 1fr;
   grid-gap: 20px;
+  // width:90%;
   }
   .overlay {
 
@@ -50,6 +51,7 @@
     }
   }
   .textGroup {
+    width: 700px;
     position: absolute;
     bottom: 10px;
     left: 0;
