@@ -37,11 +37,15 @@ export const data = [
     textGroup: [
       {
         subheading: 'Welcome!',
-        text: 'Some random text',
+        text: 'In the fast-paced world of business, success is often the result of strategic planning, innovation, and adaptability.',
       },
       {
         subheading: 'This is subheading',
-        text: 'In the fast-paced world of business, success is often the result of strategic planning, innovation, and adaptability. Companies strive to outshine their competitors by delivering exceptional products and services that cater to ever-evolving customer needs.',
+        text: 'In the fast-paced world of business, success is often the result of strategic planning, innovation, and adaptability.',
+      },
+      {
+        subheading: 'This is subheading_2',
+        text: 'In the fast-paced world of business, success is often the result of strategic planning, innovation, and adaptability. ',
       },
     ],
     imageElement: {
@@ -54,7 +58,7 @@ export const data = [
     textGroup: [
       {
         subheading: 'This is subheading',
-        text: 'In the fast-paced world of business, success is often the result of strategic planning, innovation, and adaptability. Companies strive to outshine their competitors by delivering exceptional products and services that cater to ever-evolving customer needs. From startups to multinational corporations, the business landscape is a bustling ecosystem, where entrepreneurs chase opportunities, forge partnerships, and navigate through challenges. The race for market dominance fuels ambition, while entrepreneurship sparks creativity and fosters economic growth. In this dynamic realm, staying ahead requires sharp instincts, a keen eye for trends, and a relentless drive to push boundaries. Business is the heartbeat of progress, propelling societies towards a future filled with limitless possibilities.',
+        text: 'In the fast-paced world of business, success is often the result of strategic planning, innovation, and adaptability. ',
       },
     ],
     imageElement: {
@@ -67,7 +71,7 @@ export const data = [
     textGroup: [
       {
         subheading: 'This is subheading',
-        text: 'In the fast-paced world of business, success is often the result of strategic planning, innovation, and adaptability. Companies strive to outshine their competitors by delivering exceptional products and services that cater to ever-evolving customer needs. From startups to multinational corporations, the business landscape is a bustling ecosystem, where entrepreneurs chase opportunities, forge partnerships, and navigate through challenges. The race for market dominance fuels ambition, while entrepreneurship sparks creativity and fosters economic growth. In this dynamic realm, staying ahead requires sharp instincts, a keen eye for trends, and a relentless drive to push boundaries. Business is the heartbeat of progress, propelling societies towards a future filled with limitless possibilities.',
+        text: 'In the fast-paced world of business, success is often the result of strategic planning, innovation, and adaptability.',
       },
     ],
     imageElement: {

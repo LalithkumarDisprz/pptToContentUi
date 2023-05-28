@@ -4,22 +4,36 @@ import { useState } from 'react';
 import { ContentCategory } from '../enums/ContentCategory';
 import ImageTextOverlay from '../components/ImageTextOverlay';
 import { data } from '../utils/sampleData';
+import ImageTextOverlaySide from '../components/ImageTextOverlaySide';
 const ContentView = () => {
-  const [currentPage, setCurrentPage] = useState(data[1]);
-  console.log(currentPage, 'pge');
+  // const [currentPage, setCurrentPage] = useState(data[1]);
+  // console.log(currentPage, 'pge');
+  // const nextPage = () => {
+  //   setCurrentPage((prevPage) => {
+  //     const currentIndex = data.findIndex(
+  //       (page) => page.pageNumber === prevPage.pageNumber
+  //     );
+  //     if (currentIndex !== -1 && currentIndex + 1 < data.length) {
+  //       return data[currentIndex + 1];
+  //     }
+  //     return prevPage;
+  //   });
+  // };
+  const [currentPage, setCurrentPage] = useState(1);
+
   const nextPage = () => {
-    const currentIndex = data.findIndex(
-      (page) => page.pageNumber === currentPage.pageNumber
-    );
-    if (currentIndex !== -1 && currentIndex + 1 < data.length) {
-      setCurrentPage(data[currentIndex + 1]);
-    }
+    setCurrentPage((prevPage) => prevPage + 1);
   };
-  console.log(currentPage.pageNumber);
   const renderContent = () => {
-    switch (currentPage.imageElement.aspectRatio) {
+    const pageData = data.find((page) => page.pageNumber === currentPage);
+
+    if (!pageData) {
+      return null;
+    }
+    switch (pageData.imageElement.aspectRatio) {
       case ContentCategory.ImageTextOverlay:
-        return <ImageTextOverlay data={currentPage} />;
+        return <ImageTextOverlay data={pageData} currentPage={currentPage} />;
+      // return <ImageTextOverlaySide data={currentPage} />;
       default:
         break;
     }
